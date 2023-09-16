@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 			{
 				count = teste(count);
-			{
+			}
 		}
 	}
 
