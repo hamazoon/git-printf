@@ -11,14 +11,14 @@ int _execute(char **command, char **argv)
 		if (execve(command[0], command, environ) == -1)
 		{
 			perror(argv[0]);
-			freearray2D(command);
+			free2D(command);
 			exit(0);
 		}
 	}
 	else
 	{
 		waitpid(child, &status, 0);
-		freearray20(command);
+		free2D(command);
 	}
 	return (WEXITSTATUS(status));
 }

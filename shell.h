@@ -10,10 +10,10 @@
 #include <signal.h>
 #include <stdio.h>
 #include <errno.h>
-#include <fctrl.h>
+#include <fcntl.h>
 
 #define DELIM " \t\n"
-extern char **environ
+extern char **environ;
 
 char *read_line(void);
 int _str_length(const char *s);

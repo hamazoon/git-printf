@@ -3,7 +3,7 @@
 char **tokenizer(char *line)
 {
 	char *token = NULL, *tmp = NULL;
-	char **commande = NULL;
+	char **command = NULL;
 	int cpt = 0, i = 0;
 
 	if (!line)
