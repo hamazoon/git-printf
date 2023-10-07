@@ -1,9 +1,19 @@
 #include "shell.h"
+
+/**
+ * main - Entry point of a simple shell program.
+ * @ac: The number of command-line arguments (unused).
+ * @argv: An array of command-line argument strings (unused).
+ *
+ * Return: The exit status of the shell program.
+ */
+
 int main(int ac, char **argv)
 {
 	char *chaine = NULL;
 	char **command = NULL;
-	int status = 0;
+
+	int exit_status = 0;
 
 	(void) ac;
 	while (1)
@@ -12,12 +22,12 @@ int main(int ac, char **argv)
 		if (chaine == NULL)
 		{
 			if (isatty(STDOUT_FILENO))
-			write(STDOUT_FILENO, "\n", 1);
-			return (status);
+				write(STDOUT_FILENO, "\n", 1);
+			return (exit_status);
 		}
 		command = tokenizer(chaine);
 		if (!command)
 			continue;
-		status = _execute(command, argv);
+		exit_status = _execute(command, argv);
 	}
 }
