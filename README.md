@@ -1,1 +1,1 @@
-a repo of testing for printf project 
+a repo of testing for Simple shell project 
