@@ -61,8 +61,6 @@ char *_string_copy(char *destination, char *source)
 	return (destination);
 }
 
-
-
 /**
  * _string_duplicate - Duplicates the given string
  * @str: The string to duplicate
