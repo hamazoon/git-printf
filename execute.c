@@ -26,7 +26,6 @@ int _execute(char **command, char **argv)
 		if (execve(command[0], command, environ) == -1)
 		{
 			perror(argv[0]);
-			free2D(command);
 			exit(EXIT_FAILURE);
 		}
 	}

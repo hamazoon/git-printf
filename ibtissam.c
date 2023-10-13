@@ -29,9 +29,9 @@ int _str_compare(char *s1, char *s2)
 	while (*s1 == *s2)
 	{
 		if (*s1 == '\0')
-	{
-		return (0);
-	}
+		{
+			return (0);
+		}
 		s1++;
 		s2++;
 	}
@@ -44,6 +44,7 @@ int _str_compare(char *s1, char *s2)
  * @source: The source string
  * Return: A pointer to the destination string
  */
+
 char *_string_copy(char *destination, char *source)
 {
 	int i = 0;
